@@ -1,6 +1,6 @@
 {
     "name": "codekit-jsx-hack",
-    "version": "0.0.3",
+    "version": "0.0.4",
     "description": "A workaround for compiling React JSX files in CodeKit using Babel",
     "main": "main.js",
     "scripts": {

@@ -21,8 +21,8 @@ That's it - CodeKit should now compile your .coffee files (which are actually js
 Minification can be enabled inside CodeKit for CoffeeScript code and it works.
 
 ## How it works
-CodeKit lets you use a custom compiler for CoffeeScript code. We do our thing by creating a compiler that makes CodeKit think it's a CoffeeScript compiler while behind the scenes it's the Babel compiler compiling JSX code into .js files.   
-Essentially, we create fake .coffee files that are actually .jsx files and compile them using a fake CoffeeScript compiler that is actually the Babel compiler for jsx files.
+CodeKit lets you use a custom compiler for CoffeeScript code. This project uses a compiler that makes CodeKit think it's a CoffeeScript compiler while behind the scenes it's the Babel compiler compiling JSX code into .js files.   
+Essentially, you create fake .coffee files that are actually .jsx files and compile them using a fake CoffeeScript compiler that is actually the Babel compiler for jsx files.
 
 ## Limitations   
 - No source maps *(yet)*
@@ -34,7 +34,7 @@ Backticks in .js files will be removed by CodeKit. But backticks in your (fake) 
 
 
 #### Using all ES6 features
-If you wish to take advantage of many of the new ES6 features in your code - such as maps, sets, etc. - you need to include the Babel browser-polyfill.js file. You can do this through a `<script>` tag or by prefixing it the CodeKit way. You need to include this file **before** the compiled code.   
+If you wish to take advantage of many of the new ES6 features in your code - such as maps, sets, etc. - you need to include the Babel browser-polyfill.js file (this requirement is not specific to this project though and is required whenever you use Babel). You can do this through a `<script>` tag or by prefixing it the CodeKit way. You need to include this file **before** the compiled code.   
 Read more at <a href="http://babeljs.io/docs/usage/polyfill/">Babel docs</a>.   
 Note: not all ES6 features require the polyfill. Refer to the Babel docs for details.
 
