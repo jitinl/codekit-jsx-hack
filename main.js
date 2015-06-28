@@ -27,17 +27,3 @@ for (var i=0;i<scripts.length;i++){
 var outScripts=scripts.join(';')
 var scriptPath=outDir + "/" + path.basename(inFile, '.coffee') + '.js'
 fs.writeFileSync(scriptPath,outScripts)
-
-/*
-babel.transformFile(inFile,{ blacklist: ["strict"] }, function(err, result) {
-    if (err != null) {
-        console.error("Error while trying to transform the file " + inFile + ":" + err)
-        process.exit(1)
-    }
-    fs.writeFile(outDir + "/" + path.basename(inFile, '.coffee') + '.js', result.code, function(err) {
-        if (err != null) {
-            console.error("Error when trying to write the compiled output file:", err)
-            process.exit(1)
-        }
-    })
-})*/
