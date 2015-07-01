@@ -14,6 +14,7 @@ Create an installation folder and run
 Open CodeKit, go to preferences > compilers > CoffeeScript , set it to use a custom compiler and choose the compiler to be `yourInstallationFolder/node_modules/codekit-jsx-hack/main.js`
 
 Set CodeKit to stop checking CoffeeScript syntax (For example: project settings>Languages>CoffeeScript>Check syntax with:Nothing) 
+Disable source maps for coffeescript
 Rename all your `.jsx` files to `.coffee` so that CodeKit thinks they are CoffeeScript files
 
 That's it - CodeKit should now compile your .coffee files (which are actually jsx files) using the Babel compiler.   
